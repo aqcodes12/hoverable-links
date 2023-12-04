@@ -4,7 +4,7 @@
   transition: all 0.2s linear;
 }
 body {
-  background: #0259f0;
+  background: #fff;
 }
 .wrapper {
   text-align: center;
@@ -15,7 +15,7 @@ body {
   min-height: 90vh;
 }
 .wrapper .box {
-  color: #fff;
+  color: #000000;
   font-size: 35px;
   padding: 30px;
   cursor: pointer;
@@ -23,7 +23,7 @@ body {
   letter-spacing: 3px;
 }
 .wrapper .box:hover {
-  color: #fff;
+  color: #000000;
   position: relative;
   z-index: 2;
   text-shadow: 0 10px 5px rgba(0, 0, 0, 0.9);
