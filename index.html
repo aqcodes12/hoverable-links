@@ -38,18 +38,22 @@
       let A = document.querySelector(".wrapper");
       let B = A.querySelector(".effect");
 
-      document.body.onmousemove = (e) => {
-        let x = e.pageX;
-        let y = e.pageY;
-        B.style.top = y + "px";
-        B.style.left = x + "px";
-      };
-
       A.querySelectorAll(".box").forEach((text) => {
-        text.onmousemove = () => {
+        text.onmouseover = () => {
           B.src = text.getAttribute("data-src");
+          B.style.transform = "translate(-50%, -50%) scale(1)";
+          B.style.opacity = "1";
+          B.style.top = "auto";
+          B.style.bottom = "0";
+          B.style.left = "50%";
+          B.style.right = "auto";
         };
       });
+
+      // Additional code to hide the image when not hovering over any link
+      A.onmouseleave = () => {
+        B.style.opacity = "0";
+      };
     </script>
   </body>
 </html>
